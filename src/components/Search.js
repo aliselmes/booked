@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const Search = (props) => {
+const Search = ({search}) => {
     const [searchValue, setSearchValue] = useState("");
 
     const handleSearchInputChanges = (e) => {
         setSearchValue(e.target.value);
+        console.log(e.target.value);
     }
 
     const resetInputField = () => {
@@ -13,7 +14,7 @@ const Search = (props) => {
 
     const searchFunction = (e) => {
         e.preventDefault();
-        props.search(searchValue);
+        search(searchValue);
         resetInputField();
     }
 

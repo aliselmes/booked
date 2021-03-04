@@ -8,7 +8,7 @@ const Book = ({book}) => {
     return(
         <div>
             <Card>
-                <CardImg top width="100%" src={book.volumeInfo.imageLinks.thumbnail} alt={`Cover image of ${book.volumeInfo.title}`} />
+                <CardImg top width="100%" src={book.volumeInfo.imageLinks} alt={`Cover image of ${book.volumeInfo.title}`} />
                 <CardBody>
                     <CardTitle tag="h5">{book.volumeInfo.title}</CardTitle>
                     <CardSubtitle tag="h6" className="mb-2 text-muted">{book.volumeInfo.authors}</CardSubtitle>
